@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import FilmList from '../components/FilmList';
-import FilmBtn from '../components/FilmBtn';
 
 const FilmBox = () => {
 
@@ -33,11 +32,43 @@ const FilmBox = () => {
           ]
     );
 
+    const updateFilms = () => {
+        const newFilms = [
+            {
+                id: 6,
+                name: "A Quiet Place Pt. II",
+                url: "https://www.imdb.com/title/tt8332922/?ref_=cs_ov_tt"
+              },
+              {
+                id: 7,
+                name: "Cruella",
+                url: "https://www.imdb.com/title/tt3228774/?ref_=cs_ov_tt"
+              },
+              {
+                id: 8,
+                name: "The Dry",
+                url: "https://www.imdb.com/title/tt5144174/?ref_=cs_ov_tt"
+              },
+              {
+                id: 9,
+                name: "Venom: Let There Be Carnage", 
+                url: "https://www.imdb.com/title/tt7097896/?ref_=nv_sr_srsg_0"
+              },
+              {
+                id: 10,
+                name: "Eternals",
+                url: "https://www.imdb.com/title/tt9032400/?ref_=vp_vi_tt"
+              }
+        ]
+      //  setFilms(films = newFilms);
+    }
+
     return (
         <>
-            <h1>Upcoming films</h1>
             <FilmList films={films}/>
-            <FilmBtn />
+            <button onClick={() => updateFilms()}>
+                View more upcoming releases {'>>'}
+            </button>
         </>
     )
 
